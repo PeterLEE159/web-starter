@@ -21,12 +21,6 @@
     		<type>double</type>
     	</attribute>
     	<attribute>
-    		<name>hover</name>
-    		<required>true</required>
-    		<rtexprvalue>true</rtexprvalue>
-    		<type>boolean</type>
-    	</attribute>
-    	<attribute>
     		<name>id</name>
     		<required>false</required>
     	</attribute>

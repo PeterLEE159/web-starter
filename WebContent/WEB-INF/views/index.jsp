@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container">
-	<h1><ct:rating point="3.5" hover="true" id="rating" click="starCheck"/></h1>
+	<h1><ct:rating point="3.5" id="rating" click="starCheck"/></h1>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>

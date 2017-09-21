@@ -7,7 +7,7 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class RatingTag extends SimpleTagSupport{
-	private boolean hover;
+	
 	private String id;
 	private double point;
 	private String click;
@@ -15,21 +15,16 @@ public class RatingTag extends SimpleTagSupport{
 	
 	@Override
 	public void doTag() throws JspException, IOException {
+		boolean isClick = click != null;
 		JspWriter out = this.getJspContext().getOut();
-		String className = "star" + (hover ? " star-hover" : "");
+		String className = "star" + (isClick ? " star-hover" : "");
 		out.println("<span class='rating'"+(id != null ? " id='"+this.id+"'" : "")+">");
 		for(int i=0; i < 5 ; i++) {
-			out.println("	<span class='"+className+ ( point >= (5 - i) ? " filled" : "" )+"'"+(hover ? " onclick='execStar("+(5 - i)+", "+this.click+")'" : "" )+")></span>");
+			out.println("	<span class='"+className+ ( point >= (5 - i) ? " filled" : "" )+"'"+(isClick ? " onclick='execStar("+(5 - i)+", "+this.click+")'" : "" )+")></span>");
 		}
 		out.println("</span>");
 	}
 	
-	public boolean isHover() {
-		return hover;
-	}
-	public void setHover(boolean hover) {
-		this.hover = hover;
-	}
 
 	public String getId() {
 		return id;
