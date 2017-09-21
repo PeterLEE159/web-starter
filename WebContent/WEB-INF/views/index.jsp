@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="ct" uri="http://java.sun.com/jsp/jstl/ct" %>
+<%@ taglib prefix="tag" uri="http://java.sun.com/jsp/jstl/tag" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,8 +12,7 @@
 </head>
 <body>
 <div class="container">
-	<h1><ct:rating value="3.5" click="checkStar" name="ratingName" hover="hoverStar" id="ratingId"/></h1>
-	
+	<h1><tag:rating value="3" click="checkStar" name="ratingName" hover="hoverStar"/></h1>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
@@ -21,10 +20,9 @@
 <script src="/js/main.js"></script>
 <script>
 
-	var checkStar = function(next, pre) {
+	var checkStar = function(next) {
 		console.log('클릭된거', next);
-		console.log('이전거', pre);
-		console.log('인풋으로부터 읽기', $('#ratingId').val());
+		console.log('인풋으로부터 읽기', $("input[name='ratingName']").val());
 	}
 	
 	var hoverStar = function(starNum) {

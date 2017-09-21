@@ -8,7 +8,7 @@
     <display-name>Custom Tag Name</display-name>
     <tlib-version>1.0</tlib-version>
     <short-name>ct</short-name>
-    <uri>http://java.sun.com/jsp/jstl/ct</uri>
+    <uri>http://java.sun.com/jsp/jstl/tag</uri>
     
     <tag>
     	<name>rating</name>
@@ -22,10 +22,6 @@
     	</attribute>
     	<attribute>
     		<name>name</name>
-    		<required>false</required>
-    	</attribute>
-    	<attribute>
-    		<name>id</name>
     		<required>false</required>
     	</attribute>
     	<attribute>
