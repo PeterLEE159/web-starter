@@ -12,7 +12,8 @@
 </head>
 <body>
 <div class="container">
-	<h1><ct:rating point="3.5" id="rating" click="starCheck"/></h1>
+	<h1><ct:rating value="3.5" click="checkStar" name="ad" hover="hoverStar"/></h1>
+	
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
@@ -20,8 +21,15 @@
 <script src="/js/main.js"></script>
 <script>
 
-	var starCheck = function(next, pre) {
-		
+	var checkStar = function(next, pre) {
+		console.log('클릭된거', next);
+		console.log('이전거', pre);
+		console.log('인풋으로부터 읽기', $('#ad').val());
 	}
+	
+	var hoverStar = function(starNum) {
+		console.log('hover', starNum);
+	}
+	
 </script>
 </html>

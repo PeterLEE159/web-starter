@@ -15,17 +15,21 @@
     	<tag-class>tag.RatingTag</tag-class>
     	<body-content>empty</body-content>
     	<attribute>
-    		<name>point</name>
+    		<name>value</name>
     		<required>true</required>
     		<rtexprvalue>true</rtexprvalue>
     		<type>double</type>
     	</attribute>
     	<attribute>
-    		<name>id</name>
+    		<name>name</name>
     		<required>false</required>
     	</attribute>
     	<attribute>
     		<name>click</name>
+    		<required>false</required>
+    	</attribute>
+    	<attribute>
+    		<name>hover</name>
     		<required>false</required>
     	</attribute>
     </tag>

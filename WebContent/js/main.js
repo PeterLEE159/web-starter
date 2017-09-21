@@ -1,9 +1,10 @@
 $(function() {
-	var execStar = (function() {
+	var chkStar = (function() {
 		var previous;
-		return function(starNum, func) {
+		return function(starNum, func, name) {
 			var i = 1, tags = $('.star-hover');
 			
+			if(name) $('#'+name).val(starNum);
 			if(func) func(starNum, previous);
 			
 			for(; i<= 5; i++) {
@@ -14,5 +15,4 @@ $(function() {
 			previous = starNum;
 		};
 	})();
-	
 });
