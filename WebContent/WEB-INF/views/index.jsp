@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="ct" uri="http://www.jhta.co.kr/tags/ct" %>
+<%@ taglib prefix="ct" uri="http://java.sun.com/jsp/jstl/ct" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container">
-	<h1><ct:rating value="3.5" click="checkStar" name="ad" hover="hoverStar"/></h1>
+	<h1><ct:rating value="3.5" click="checkStar" name="ratingName" hover="hoverStar" id="ratingId"/></h1>
 	
 </div>
 </body>
@@ -24,7 +24,7 @@
 	var checkStar = function(next, pre) {
 		console.log('클릭된거', next);
 		console.log('이전거', pre);
-		console.log('인풋으로부터 읽기', $('#ad').val());
+		console.log('인풋으로부터 읽기', $('#ratingId').val());
 	}
 	
 	var hoverStar = function(starNum) {
