@@ -1,0 +1,97 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
+
+@import url("https://fonts.googleapis.com/earlyaccess/nanumpenscript.css");
+@import url("http://fonts.googleapis.com/earlyaccess/jejugothic.css");
+@import url("http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css");
+@import url("https://fonts.googleapis.com/earlyaccess/kopubbatang.css");
+@import url("https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css");
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("https://fonts.googleapis.com/earlyaccess/hanna.css");
+@import url("https://fonts.googleapis.com/earlyaccess/jejuhallasan.css");
+
+$primary: #2fa4e7;
+$iron: #dadbdf; 
+$hopbush: #c69;
+
+
+.f-nanum {
+	font-family: 'Nanum Pen Script', cursive;
+}
+
+.f-gothic {
+	font-family: 'Jeju Gothic', sans-serif;
+}
+
+.f-myeongjo {
+	font-family: 'Jeju Myeongjo', serif;
+}
+
+.f-kopub {
+	font-family: 'KoPub Batang', serif;
+}
+
+.f-nanum-brush {
+	font-family: 'Nanum Brush Script', cursive;
+}
+
+.f-noto-sans {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.f-hanna {
+	font-family: 'Hanna', sans-serif;
+}
+
+.f-jeju-hallasan {
+	font-family: 'Jeju Hallasan', cursive;
+}
+
+
+
+
+
+
+
+
+.rating {
+    unicode-bidi:bidi-override;
+    direction:rtl;
+    overflow: hidden;
+	max-height: 30px;
+	
+    .star {
+	    font-family:FontAwesome;
+	    font-weight:normal;
+	    font-style:normal;
+	    display:inline-block;
+		&:before {
+		    content:"\f006";
+		    color: $iron;
+		}    
+	}
+	
+	.star-hover:hover {
+	    cursor:pointer;
+	    &:before {
+	    	content:"\f005";
+    		color: $primary;
+	    }
+	    
+	}
+	
+	.star-hover:hover~span.star:before {
+	    content:"\f005";
+	    color:$primary;
+	}
+	
+	.star.filled { 
+		color: $primary; 
+		content:"\f005";
+		&:before {
+			color: $primary;
+			content:"\f005";
+		}
+	}
+}

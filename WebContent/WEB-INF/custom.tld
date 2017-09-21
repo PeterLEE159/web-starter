@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <description>Custom Tag Description</description>
+    <display-name>Custom Tag Name</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>ct</short-name>
+    <uri>http://www.jhta.co.kr/tags/ct</uri>
+    
+    <tag>
+    	<name>rating</name>
+    	<tag-class>tag.RatingTag</tag-class>
+    	<body-content>empty</body-content>
+    	<attribute>
+    		<name>point</name>
+    		<required>true</required>
+    		<rtexprvalue>true</rtexprvalue>
+    		<type>double</type>
+    	</attribute>
+    	<attribute>
+    		<name>hover</name>
+    		<required>true</required>
+    		<rtexprvalue>true</rtexprvalue>
+    		<type>boolean</type>
+    	</attribute>
+    	<attribute>
+    		<name>id</name>
+    		<required>false</required>
+    	</attribute>
+    	<attribute>
+    		<name>click</name>
+    		<required>false</required>
+    	</attribute>
+    </tag>
+</taglib>
